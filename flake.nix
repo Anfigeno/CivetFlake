@@ -20,5 +20,9 @@
         ./nix/civet
         ./nix/shellDeDesarrollo.nix
       ];
+
+      flake.overlays.default = final: prev: {
+        civet = prev.callPackage ./nix/civet/paquete { };
+      };
     };
 }
