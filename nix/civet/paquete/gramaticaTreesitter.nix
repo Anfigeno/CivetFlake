@@ -31,9 +31,9 @@ let
       '';
       installPhase = ''
         runHook preInstall
-        mkdir -p $out/parser $out/queries
+        mkdir -p $out/parser $out/queries/civet
         cp parser.so $out/parser/${name}.so
-        cp -r queries/. $out/queries/
+        cp -r queries/. $out/queries/civet
         runHook postInstall
       '';
       meta = with lib; {
