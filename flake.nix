@@ -23,9 +23,9 @@
 
       flake.overlays.default = final: prev: {
         civet = prev.callPackage ./nix/civet/paquete { };
-        vimPlugins.nvim-treesitter-parsers.civet =
-          prev.callPackage ./nix/civet/paquete/gramaticaTreesitter.nix
-            { };
+        vimPlugins.nvim-treesitter-parsers = prev.vimPlugins.nvim-treesitter-parsers // {
+          civet = final.callPackage ./nix/civet/paquete/gramaticaTreesitter.nix { };
+        };
       };
     };
 }
