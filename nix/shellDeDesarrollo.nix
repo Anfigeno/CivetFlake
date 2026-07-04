@@ -10,6 +10,7 @@
           nixfmt
 
           config.packages.default
+          config.packages.treesitter-civet
         ];
       };
     };
