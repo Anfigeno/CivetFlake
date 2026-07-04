@@ -1,0 +1,12 @@
+{
+  "name": "civet-nix-bundle",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Bundle de herramientas de Civet (compilador, LSP, tsc) para empaquetar con Nix buildNpmPackage",
+  "dependencies": {
+    "@danielx/civet": "0.11.14",
+    "@danielx/civet-language-server": "0.3.41",
+    "typescript": "6.0.3",
+    "yaml": "2.9.0"
+  }
+}
